@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  title: Exemplo de API de Lançamentos
+  version: 1.0.0
+paths:
+  /launches:
+    get:
+      summary: Obtém uma lista de lançamentos
+      responses:
+        '200':
+          description: Lista de lançamentos obtida com sucesso
+          content:
+            application/json:
+              example:
+                results: 
+                  - id: 123
+                    name: FalconSat
+                    static_fire_date_utc: 2006-03-17T00:00:00.000Z
+                    static_fire_date_unix: 1142553600
+                    net: false
+                    window: 0
+                    rocket: 
+                      name: Falcon 1
+                      type: rocket
+                      stages: 2
+                      country: Republic of the Marshall Islands
+                      company: SpaceX
+                totalDocs: 205
+                page: 2
+                totalPages: 103
+                hasNext: true
+                hasPrev: false
+  /launches/stats:
+    get:
+      summary: Obtém estatísticas dos lançamentos
+      responses:
+        '200':
+          description: Estatísticas de lançamentos obtidas com sucesso
+          content:
+            application/json:
+              example:
+                launchCountByName:
+                  - _id: "Falcon 1"
+                    count: 5
+                  - _id: "Falcon 9"
+                    count: 5
+                  - _id: "Falcon Heavy"
+                    count: 5
+                successLaunches: 7
+                failureLaunches: 3
+                launchCountByDate: 
+                  - _id:
+                      year: 2008
+                      month: 8
+                      name: "Falcon 1"
+                    count: 1
+                  - _id:
+                      year: 2016
+                      month: 5
+                      name: "Falcon 9"
+                    count: 1

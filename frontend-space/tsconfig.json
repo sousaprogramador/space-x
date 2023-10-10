@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "bundler",
+    "useDefineForClassFields": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowImportingTsExtensions": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": ["node", "jest", "@testing-library/jest-dom"]
+  },
+  "include": ["src", "src/__tests__"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

@@ -1,0 +1,35 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --text-muted: #878a99;
+  --primary-color: #292e32;
+  --secondary-color: #32383e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+strong {
+  color: var(--text-muted);
+}
+
+th {
+  color: var(--text-muted) !important;
+}
+
+.global {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+
+  @media (max-width: 500px) {
+    padding: 0;
+  }
+}
